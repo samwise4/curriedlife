@@ -1,0 +1,18 @@
+{{#if author}}
+    <footer class="author-mini">
+        <address itemscope itemtype="http://schema.org/Person">
+            {{#if author.image}}
+                <div class="author-image"><img src="{{author.image}}" itemprop="image"/></div>
+            {{/if}}
+            <div class="author-info">
+                <h4><span itemprop="author">{{author.name}}</span></h4>
+                {{#if author.website}}
+                    <div><a href="{{author.website}}" itemprop="url" class="ajax">{{author.website}}</a></div>
+                {{/if}}
+                <div>
+                    <p>{{author.bio}}</p>
+                </div>
+            </div>
+        </address>
+    </footer>
+{{/if}}

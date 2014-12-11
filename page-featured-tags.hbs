@@ -1,0 +1,97 @@
+{{!< default}}
+
+
+{{#post}}
+    <main id="main-content" class="content-wide" role="main">
+<header class="tag-archive-header">
+    <h1>Featured Tags</h1>
+    <h4>A selection of significant categories. In what are you interested?</h4>
+</header>
+        <div id="featuredtags-container" class="featuredtags-container js-masonry" data-masonry-options='{ "columnWidth": ".grid-sizer", "itemSelector": ".mason-block", "transitionDuration": "0.6s", "hiddenStyle": {"opacity": "0"}, "visibleStyle": {"opacity": "1"} }'>
+            <div class="grid-sizer"></div>
+
+        {{! For Each Featured Tag}}
+            <div class="mason-block r1x2">
+                <article class="featuredtag csharp">
+                    <a href="{{@blog.url}}/tag/csharp" class="ajax"><span class="clickable"></span></a>
+                    <header class="post-header">
+                        <h2 class="">C#</h2>
+                    </header>
+                   </section>
+                    <div class="featuredtag-background"></div>
+                </article>
+            </div>
+            <div class="mason-block r1x2">
+                <article class="featuredtag fsharp">
+                    <a href="{{@blog.url}}/tag/fsharp" class="ajax"><span class="clickable"></span></a>
+                    <header class="post-header">
+                        <h2 class="">F#</h2>
+                    </header>
+                    <div class="featuredtag-background"></div>
+                </article>
+            </div>
+            <div class="mason-block r2x2">
+                <article class="featuredtag web-frontend">
+                    <a href="{{@blog.url}}/tag/web-frontend" class="ajax"><span class="clickable"></span></a>
+                    <section class="featuredtag-excerpt">
+                        <p>web front-end</p>
+                    </section>
+                    <header class="post-header">
+                        <h2 class="">&lt;&#47;&gt;</h2>
+                    </header>
+                    <div class="featuredtag-background"></div>
+                </article>
+            </div>
+            <div class="mason-block r1x1">
+                <article class="featuredtag ai">
+                    <a href="{{@blog.url}}/tag/ai" class="ajax"><span class="clickable"></span></a>
+                    <header class="post-header">
+                        <h2 class="">A.I.</h2>
+                    </header>
+                   </section>
+                    <div class="featuredtag-background"></div>
+                </article>
+            </div>
+            <div class="mason-block r1x1">
+                <article class="featuredtag android">
+                    <a href="{{@blog.url}}/tag/android" class="ajax"><span class="clickable"></span></a>
+                    <header class="post-header">
+                        <h2 class="">DROID</h2>
+                    </header>
+                   </section>
+                    <div class="featuredtag-background"></div>
+                </article>
+            </div>
+            <div class="mason-block r1x1">
+                <article class="featuredtag food">
+                    <a href="{{@blog.url}}/tag/food" class="ajax"><span class="clickable"></span></a>
+                    <header class="post-header">
+                        <h3 class="">Cooking with Food</h3>
+                    </header>
+                    <section class="featuredtag-excerpt">
+                        <p></p>
+                    </section>
+                    <div class="featuredtag-background"></div>
+                </article>
+            </div>
+            <div class="mason-block r1x2">
+                <article class="featuredtag vis3d">
+                    <a href="{{@blog.url}}/tag/vis3d" class="ajax"><span class="clickable"></span></a>
+                    <header class="post-header">
+                        <h3 class="">3D Visualization</h3>
+                    </header>
+                    <section class="featuredtag-excerpt">
+                        <p></p>
+                    </section>
+                    <div class="featuredtag-background"></div>
+                </article>
+            </div>
+        {{! End For}}
+        </div>
+
+        <script>
+            // Store the pagination max-pages property for use in infinite scrolling
+            var max_pages = 0;
+        </script>
+    </main>
+{{/post}}

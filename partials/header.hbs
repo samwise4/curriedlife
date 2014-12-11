@@ -1,0 +1,24 @@
+<header id="main-header">
+    <div id="main-header-inner">
+        {{#if @blog.logo}}
+            <a href="{{@blog.url}}/" title="link to homepage for {{@blog.title}}"><img src="{{@blog.logo}}" width="80" alt="{{@blog.title}} logo" class="" /></a>
+        {{/if}}
+        <h1 class=""><a href="{{@blog.url}}/" title="link to homepage for {{@blog.title}}" class="ajax">{{@blog.title}}</a></h1>
+        <p id="main-header-description">{{@blog.description}}</p>
+        <div id="navigation-wrapper">
+            <nav id="header-navigation">
+                <ul class="navigation">
+                    <li><a href="{{@blog.url}}/" title="link to {{@blog.title}} blog" class="blog-button ajax">Blog</a></li>
+                    <li><a href="{{@blog.url}}/about" title="link to information about me!" class="blog-button ajax">About</a></li>
+                    <li><a href="{{@blog.url}}/featured-tags" title="link to featured tags" class="blog-button ajax">Featured Tags</a></li>
+                </ul>
+            </nav>
+            <div id="header-social">
+               <a href="{{@blog.url}}/rss/" title="Subscribe!"><i class="fa fa-rss-square" alt="RSS"></i></a>
+               <a href="mailto:sam@curriedlife.com" title="Email sam@curriedlife.com"><i class="fa fa-envelope-square" alt="Email"></i></a>
+               <a href="http://www.linkedin.com/pub/sam-meier/46/b87/1b7/" title="View Sam's LinkedIn profile"><i class="fa fa-linkedin-square" alt="LinkedIn"></i></a>
+               <a href="http://www.twitter.com/" title="View Sam's Twitter profile"><i class="fa fa-twitter-square" alt="Twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</header>

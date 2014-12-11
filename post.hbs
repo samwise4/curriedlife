@@ -1,0 +1,36 @@
+{{!< default}}
+
+{{#post}}
+<main id="main-content" class="content-narrow" role="main">
+    <aside id="tableOfContents" class="no-js">
+        <span>Post Contents <a id="tableOfContentsToggle" href="#">(toggle)</a></span>
+    </aside>
+    <article class="{{post_class}}">
+        <header class="post-header">
+            <div>
+                <time datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format="dddd DD MMM YYYY"}}</time>
+                {{#if tags}}
+                    <div class="post-tags">
+                        {{#foreach tags}}
+                            <span class="{{name}}">|  <a href="{{url}}" class="ajax">{{name}}</a></span>
+                        {{/foreach}}
+                    </div>
+                {{/if}}
+            </div>
+            <h1 itemprop="headline">{{title}}</h1>
+
+        </header>
+        <section class="post-content">
+            {{content}}
+        </section>
+        {{> postshare}}
+        {{> authormini}}
+        {{> postcomments}}
+    </article>
+    <script>
+        // Store the pagination max-pages property for use in infinite scrolling
+        var max_pages = 0;
+    </script>
+    {{> sidebarfeed}}
+</main>
+{{/post}}

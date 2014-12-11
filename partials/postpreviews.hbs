@@ -1,0 +1,54 @@
+<div id="post-preview-container" class="post-preview-container js-masonry" data-masonry-options='{ "columnWidth": ".grid-sizer", "itemSelector": ".mason-block", "transitionDuration": "0.6s", "hiddenStyle": {"opacity": "0"}, "visibleStyle": {"opacity": "1"} }'>
+    <div class="grid-sizer"></div>
+    {{#foreach posts}}
+        {{#has tag="x-r2x2"}}
+        <div class="mason-block r2x2">
+        {{else}}
+            {{#has tag="x-r2x1"}}
+            <div class="mason-block r2x1">
+            {{else}}
+                {{#has tag="x-r1x2"}}
+                <div class="mason-block r1x2">
+                {{else}}
+                {{!{{#has tag="x-r1x1"}}
+                <div class="mason-block r1x1">
+                {{!{{/has}}
+                {{/has}}
+            {{/has}}
+        {{/has}}
+        <article class="post-preview">
+            <a href="{{url}}" class="ajax"><span class="clickable"></span></a>
+            <header class="post-header">
+                <!--<div><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="dddd DD MMM YYYY"}}</time> &#8226; <span>{{tags prefix="on "}}</span></div>-->
+                <h2 class="post-title">{{{title}}}</h2>
+            </header>
+            {{^has tag="x-image"}}
+                <section class="post-excerpt">
+                    <p>{{excerpt}}&hellip;</p>
+                </section>
+            {{/has}}
+            {{#has tag="x-image"}}
+                {{content words="0"}}
+            {{else}}
+                <div class="post-preview-background"></div>
+            {{/has}}
+        </article>
+    </div>
+    {{/foreach}}
+</div>
+    <div id="infiniteScrollSpinner">
+        Loading...
+    </div>
+{{#if pagination}}
+    <div>
+        {{pagination}}
+    </div>
+{{/if}}
+<script>
+    // Store the pagination max-pages property for use in infinite scrolling
+        {{#unless pagination.prev}}
+        var max_pages = parseInt('{{pagination.pages}}');
+        {{else}}
+        var max_pages = 0;
+        {{/unless}}
+</script>

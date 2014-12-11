@@ -1,0 +1,21 @@
+{{!< default}}
+
+{{#post}}
+<main id="main-content" class="content-narrow" role="main">
+    <article class="page-about">
+        <header class="post-header">
+            <h1 itemprop="headline">{{title}}</h1>
+            <hr/>
+        </header>
+        {{> authormini}}
+        <section class="page-featuredtags-content">
+            {{content}}
+        </section>
+    </article>
+    <script>
+        // Store the pagination max-pages property for use in infinite scrolling
+        var max_pages = 0;
+    </script>
+    {{> sidebarfeed}}
+</main>
+{{/post}}

@@ -1,0 +1,272 @@
+@import "variables.less";
+
+@tag-fallback-color: #64a8d1;
+@tag-3d-color: #015965;
+@tag-ai-color: #17782d;
+@tag-android-color: #171717;
+@tag-android-color2: #5ba4d1;
+@tag-csharp-color: #2cb277;
+@tag-food-color: #d1794d;
+@tag-fsharp-color: #8e78c9;
+@tag-web-frontend-color: #3d9ad1;
+
+@tagpreview-fade: 40%;
+@tagpreview-hover-fade: 100%;
+
+.post-tags .x-r1x1,
+.post-tags .x-r2x1,
+.post-tags .x-r1x2,
+.post-tags .x-r2x2,
+.post-tags .x-image {
+    display: none;
+}
+
+/* Tag Archive Header */
+.tag-archive-header {
+    background-color: @tag-fallback-color;
+}
+
+.tag-archive-header.vis3d > .vis3d,
+.tag-archive-header.ai > .ai,
+.tag-archive-header.android > .android,
+.tag-archive-header.csharp > .csharp,
+.tag-archive-header.food > .food,
+.tag-archive-header.fsharp > .fsharp,
+.tag-archive-header.web-frontend > .web-frontend {
+    display: block;
+}
+
+.tag-archive-header.vis3d {
+    background-color: @tag-3d-color;
+    .backdrop-logo.vis3d {
+        display: inline;
+        position: absolute;
+        margin: auto;
+        top: .3em;
+        right: 0.5em;
+        padding: 0.1em;
+        font-size: 5em;
+        opacity: 0.3;
+        transform: skew(5deg, -10deg);
+    }
+}
+
+.tag-archive-header.ai {
+    background-color: @tag-ai-color;
+    .backdrop-logo.ai {
+        display: inline;
+        position: absolute;
+        margin: auto;
+        top: .3em;
+        right: 0.5em;
+        padding: 0.1em;
+        font-size: 5em;
+        opacity: 0.3;
+        transform: skew(5deg, -10deg);
+    }
+}
+
+.tag-archive-header.android {
+    background-color: @tag-android-color;
+    .backdrop-logo.android {
+        display: inline;
+        position: absolute;
+        margin: auto;
+        top: 0.1em;
+        right: 0.5em;
+        padding: 0.1em;
+        font-size: 7em;
+        opacity: 0.3;
+        transform: skew(5deg, -10deg);
+        color: @tag-android-color2;
+    }
+}
+
+.tag-archive-header.csharp {
+    background-color: @tag-csharp-color;
+    .backdrop-logo.csharp {
+        display: inline;
+        position: absolute;
+        margin: auto;
+        top: .3em;
+        right: 0.5em;
+        padding: 0.1em;
+        font-size: 5em;
+        opacity: 0.3;
+        transform: skew(5deg, -10deg);
+    }
+}
+
+.tag-archive-header.food {
+    background-color: @tag-food-color;
+    .backdrop-logo.food {
+        display: inline;
+        position: absolute;
+        margin: auto;
+        top: .3em;
+        right: 0.5em;
+        padding: 0.1em;
+        font-size: 5em;
+        opacity: 0.3;
+        transform: skew(5deg, -10deg);
+    }
+}
+
+.tag-archive-header.fsharp {
+    background-color: @tag-fsharp-color;
+    .backdrop-logo.fsharp {
+        display: inline;
+        position: absolute;
+        margin: auto;
+        top: .3em;
+        right: 0.5em;
+        padding: 0.1em;
+        font-size: 5em;
+        opacity: 0.3;
+        transform: skew(5deg, -10deg);
+    }
+}
+
+.tag-archive-header.web-frontend {
+    background-color: @tag-web-frontend-color;
+    .backdrop-logo.web-frontend {
+        display: inline;
+        position: absolute;
+        margin: auto;
+        top: .3em;
+        right: 0.2em;
+        padding: 0.1em;
+        font-size: 8em;
+        opacity: 0.3;
+        transform: skew(5deg, -10deg);
+    }
+}
+
+
+/* Tag cubes */
+.featuredtag.threedee {
+    h3 {
+        display: inline;
+        padding: 0;
+        line-height: 1em;
+    }
+    .featuredtag-background {
+        background-color: fade(@tag-3d-color, @tagpreview-fade);
+    }
+}
+.featuredtag.threedee:hover {
+    .featuredtag-background {
+        background-color: fade(@tag-3d-color, @tagpreview-hover-fade);
+    }
+}
+
+.featuredtag.ai {
+    h2 {
+        font-size: 9em;
+        padding: 0;
+        line-height: 1;
+    }
+    .featuredtag-background {
+        background-color: fade(@tag-ai-color, @tagpreview-fade);
+    }
+}
+.featuredtag.ai:hover {
+    .featuredtag-background {
+        background-color: fade(@tag-ai-color, @tagpreview-hover-fade);
+    }
+}
+
+.featuredtag.android {
+    h2 {
+        font-family: @code_font;
+        font-size: 6em;
+        padding: 0;
+        color: @tag-android-color2;
+        line-height: 1;
+    }
+    .featuredtag-background {
+        background-color: lighten(@tag-android-color, @tagpreview-fade / 3);
+    }
+}
+.featuredtag.android:hover {
+    .featuredtag-background {
+        background-color: fade(@tag-android-color, @tagpreview-hover-fade);
+    }
+}
+
+.featuredtag.csharp {
+    h2 {
+        font-size: 9em;
+        padding: 0px;
+        margin: .1em 0 0 0;
+        line-height: 1;
+    }
+    .featuredtag-background {
+        background-color: fade(@tag-csharp-color, @tagpreview-fade);
+    }
+}
+.featuredtag.csharp:hover {
+    .featuredtag-background {
+        background-color: fade(@tag-csharp-color, @tagpreview-hover-fade);
+    }
+}
+
+.featuredtag.food {
+    h2 {
+        font-size: 2em;
+        padding: 0;
+        line-height: 1;
+    }
+    .featuredtag-background {
+        background-color: fade(@tag-food-color, @tagpreview-fade);
+    }
+}
+.featuredtag.food:hover {
+    .featuredtag-background {
+        background-color: fade(@tag-food-color, @tagpreview-hover-fade);
+    }
+}
+
+.featuredtag.fsharp {
+    h2 {
+        font-size: 9em;
+        padding: 0px;
+        margin: .1em 0 0 0;
+        line-height: 1;
+    }
+    .featuredtag-background {
+        background-color: fade(@tag-fsharp-color, @tagpreview-fade);
+    }
+}
+.featuredtag.fsharp:hover {
+    .featuredtag-background {
+        background-color: fade(@tag-fsharp-color, @tagpreview-hover-fade);
+    }
+}
+
+.featuredtag.web-frontend {
+    h2 {
+        font-size: 9em;
+        margin: 0.625em 0px 0px -0.02em;
+        padding: 0;
+        line-height: 1;
+    }
+    .post-header {
+        display: inline-block;
+    }
+    .featuredtag-background {
+        background-color: fade(@tag-web-frontend-color, @tagpreview-fade);
+    }
+    .featuredtag-excerpt {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 1.4em;
+        font-size: 2em;
+    }
+}
+.featuredtag.web-frontend:hover {
+    .featuredtag-background {
+        background-color: fade(@tag-web-frontend-color, @tagpreview-hover-fade);
+    }
+}
